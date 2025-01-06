@@ -9,14 +9,14 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #525659;
+            background-color: #101010;
             min-height: 100vh;
         }
         #container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: 00px; /* only on moble phones*/
         }
         #controls {
             position: fixed;
@@ -43,8 +43,8 @@
         }
         #pdf-container {
             background-color: white;
-            margin-top: 60px;
             box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            margin-top: 00px; /* only on moble phones*/
         }
         canvas {
             max-width: 100%;
@@ -53,6 +53,24 @@
         #page-info {
             color: white;
             margin: 0 10px;
+        }
+        @media screen and (max-width: 600px) {
+            #controls {
+                flex-direction: column;
+                top: auto;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                padding: 10px;
+                background: rgba(0, 0, 0, 0.8);
+                border-radius: 5px;
+                color: white;
+                z-index: 1000;
+            }
+            #pdf-container {
+                margin-top: 0;
+            }
+            
         }
     </style>
 </head>
